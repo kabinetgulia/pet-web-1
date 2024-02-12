@@ -34,6 +34,7 @@ header nav ul li {
     padding: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
+    transition: all .4s ease;
 }
 
 header nav ul a {
@@ -41,6 +42,7 @@ header nav ul a {
     color: white;
     display: inline;
     text-decoration: none;
+    
 }
 
 header nav ul li.active, 
@@ -56,5 +58,70 @@ header nav ul li:hover a{
 
 
 main {
-    height: 500px;
+    background-color: lightgrey;
+}
+
+.slider {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+
+}
+
+.nav-slider {
+    position: absolute;
+    display: flex;
+    align-content: flex-end;
+}
+
+.bar {
+    height: 10px;
+    width: 30px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #f47103;
+    opacity: 0.5;
+    transition: all .4s ease;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    transition: all .4s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: 0;
 }
